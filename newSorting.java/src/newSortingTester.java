@@ -89,6 +89,25 @@ public class newSortingTester {
         ns.newSorting(E, 1);
         assertArrayEquals(E, new int[] {1,2,3,4,5,6,7,8});
     }
+
+    /*
+     * This test was done to test if the method works properly when the given array contains negative numbers.
+     * Input:  F = {-7,5,-3,1,-2,4,-6,8}, size = 4
+     * Expected output: {-7,-6,-3,-2,1,4,5,8}
+     * Output: {-7,-6,-3,-2,1,4,5,8}
+     * Test passed, meaning that the method is capable of sorting an array that includes negative numbers.
+     */
+    @Test
+    public void newSortingTester6(){
+        int[] F = {-7,5,-3,1,-2,4,-6,8};
+        newSorting ns = new newSorting();
+        ns.newSorting(F, 4);
+        assertArrayEquals(F, new int[] {-7,-6,-3,-2,1,4,5,8});
+    }
+
+
+
+
 }
 
 
