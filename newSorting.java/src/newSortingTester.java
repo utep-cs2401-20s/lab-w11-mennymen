@@ -90,6 +90,8 @@ public class newSortingTester {
         assertArrayEquals(E, new int[] {1,2,3,4,5,6,7,8});
     }
 
+
+
     /*
      * This test was done to test if the method works properly when the given array contains negative numbers.
      * Input:  F = {-7,5,-3,1,-2,4,-6,8}, size = 4
@@ -107,7 +109,20 @@ public class newSortingTester {
 
 
 
-
+    /*
+     * This test was done to test an edge case where the input array has its values in reverse order.
+     * Input:  G = {9,8,7,6,5,4,3,2,1,0}, size = 3
+     * Expected output: {0,1,2,3,4,5,6,7,8,9}
+     * Output: {0,1,2,3,4,5,6,7,8,9}
+     * Test passed, meaning that the method is capable of sorting an array that had its values in reverse order
+    */
+    @Test
+    public void newSortingTester7(){
+        int[] G = {9,8,7,6,5,4,3,2,1,0};
+        newSorting ns = new newSorting();
+        ns.newSorting(G, 3);
+        assertArrayEquals(G, new int[] {0,1,2,3,4,5,6,7,8,9});
+    }
 }
 
 
